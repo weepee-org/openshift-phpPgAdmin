@@ -1,7 +1,7 @@
 FROM weepee-registry/php-webserver
 
 # Add clean wordpress
-ADD app /app
+COPY app/* /app
 
 # Auto install wordpress
 ADD scripts/run.sh /scripts/run.sh

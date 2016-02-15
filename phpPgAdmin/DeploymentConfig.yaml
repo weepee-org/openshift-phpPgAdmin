@@ -25,9 +25,9 @@ spec:
         deploymentconfig: phppgadmin
     spec:
       containers:
-      - image: php/php:latest
+      - image: phppgadmin/phppgadmin:latest
         imagePullPolicy: Always
-        name: php
+        name: phppgadmin
         ports:
         - containerPort: 8080
           protocol: TCP
