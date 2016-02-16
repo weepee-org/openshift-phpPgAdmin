@@ -3,7 +3,10 @@ FROM weepee-registry/php-webserver
 # Add clean wordpress
 ADD app /app
 
-# Auto install wordpress
+# database config
+ADD config.inc.php /app/conf/config.inc.php
+
+# Entrypoint
 ADD scripts/run.sh /scripts/run.sh
 
 # Remove and mount attached storage
