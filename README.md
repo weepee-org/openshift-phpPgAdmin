@@ -8,7 +8,6 @@ Example project running:
 You need oc (https://github.com/openshift/origin/releases) locally installed:
 
 build it all
-(modify config.inc.php accordingly)
 
 ```sh
 > ./BuildAll.sh

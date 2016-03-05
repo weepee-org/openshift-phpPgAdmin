@@ -10,28 +10,11 @@
 	// An example server.  Create as many of these as you wish,
 	// indexed from zero upwards.
 
-	// Display name for the server on the login screen
-	$conf['servers'][0]['desc'] = 'PostgreSQL';
-
-	// Hostname or IP address for server.  Use '' for UNIX domain socket.
-	// use 'localhost' for TCP/IP connection on this computer
-	$conf['servers'][0]['host'] = 'postgresql.nptool-test.svc.cluster.local';
-
-	// Database port on server (5432 is the PostgreSQL default)
+	$conf['servers'][0]['desc'] = 'PostgreSQL Openshift';
+	$conf['servers'][0]['host'] = $_ENV["POSTGRESQL_SERVICE_HOST"];
 	$conf['servers'][0]['port'] = 5432;
-
-	// Database SSL mode
-	// Possible options: disable, allow, prefer, require
-	// To require SSL on older servers use option: legacy
-	// To ignore the SSL mode, use option: unspecified
 	$conf['servers'][0]['sslmode'] = 'allow';
-
-	// Change the default database only if you cannot connect to template1.
-	// For a PostgreSQL 8.1+ server, you can set this to 'postgres'.
 	$conf['servers'][0]['defaultdb'] = 'template1';
-
-	// Specify the path to the database dump utilities for this server.
-	// You can set these to '' if no dumper is available.
 	$conf['servers'][0]['pg_dump_path'] = '/usr/bin/pg_dump';
 	$conf['servers'][0]['pg_dumpall_path'] = '/usr/bin/pg_dumpall';
 
