@@ -1,4 +1,4 @@
-FROM weepee-registry/php-webserver
+FROM weepee-registry/php7-webserver
 
 RUN apk --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --update add postgresql && rm -f /var/cache/apk/*
 
