@@ -11,7 +11,7 @@
 	// indexed from zero upwards.
 
 	$conf['servers'][0]['desc'] = 'PostgreSQL Openshift';
-	$conf['servers'][0]['host'] = getenv("POSTGRESQL_SERVICE_HOST"]);
+	$conf['servers'][0]['host'] = getenv('POSTGRESQL_SERVICE_HOST');
 	$conf['servers'][0]['port'] = 5432;
 	$conf['servers'][0]['sslmode'] = 'allow';
 	$conf['servers'][0]['defaultdb'] = 'template1';
